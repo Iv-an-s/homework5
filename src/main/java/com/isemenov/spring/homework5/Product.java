@@ -3,7 +3,7 @@ package com.isemenov.spring.homework5;
 import javax.persistence.*;
 
 @Entity
-@Table(name="products")
+@Table(name = "products")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -48,5 +48,10 @@ public class Product {
                 ", title='" + title + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    public Product(String title, int price) {
+        this.title = title;
+        this.price = price;
     }
 }
